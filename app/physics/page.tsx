@@ -1,14 +1,6 @@
-import { Button, Box } from "@mui/material";
+import React from "react";
+import { PhysicsTopPage } from "@/components/pages/physics/PhysicsTopPage";
 
-export default function Page() {
-  return (
-    <>
-      <Box>
-        physics
-      </Box>
-      <Box component="main">
-        <Button variant="contained">Hello World</Button>
-      </Box>
-    </>  
-  )
-}
+const Page = () => <PhysicsTopPage />
+
+export default Page;
