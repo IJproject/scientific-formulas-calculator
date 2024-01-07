@@ -1,4 +1,7 @@
+import React from "react";
 import type { Metadata } from "next";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { Box } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -8,7 +11,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ja'>
-      <body>{children}</body>
+      <body>
+        <AppRouterCacheProvider>
+            {children}
+            <Box>
+                csakncknsa
+            </Box>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
