@@ -1,6 +1,6 @@
 import React from "react";
 import { CommonLayoutBarDrawer } from "@/components/common/layout/CommonLayoutBarDrawer";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 interface CommonLayoutProps {
   /**
@@ -22,7 +22,11 @@ export const CommonLayout = (props: CommonLayoutProps) => {
     <>
       <CommonLayoutBarDrawer color={props.color} title={props.title} />
       <Box component="main">
-        {props.children}
+        <Container maxWidth="xl">
+          <Box mt={4}>
+            {props.children}
+          </Box>
+        </Container>
       </Box>
     </>
   )
