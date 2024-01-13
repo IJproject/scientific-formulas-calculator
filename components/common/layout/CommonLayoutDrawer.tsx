@@ -1,18 +1,13 @@
 'use client'
 
 import React from 'react'
-import { firstDrawerList, secondDrawerList } from '@/constants/common';
+import { CommonLayoutDrawerList } from '@/components/common/layout/CommonLayoutDrawerList';
+import { FIRST_DRAWER_LIST, SECOND_DRAWER_LIST } from '@/constants/common';
 import {
   Box,
   Divider,
   Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
 } from "@mui/material";
-import { Home } from "@mui/icons-material";
 
 interface CommonLayoutDrawerProps {
   /**
@@ -25,27 +20,6 @@ interface CommonLayoutDrawerProps {
   handleClose: () => void
 }
 
-interface DrawerListProps {
-  id: number;
-  name: string;
-  icon: string;
-}
-
-const DrawerList = (props: {list: DrawerListProps[]}) => (
-  <List>
-    {props.list.map(item => (
-      <ListItem key={item.id} disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            <Home />
-          </ListItemIcon>
-          <ListItemText primary={item.name} />
-        </ListItemButton>
-      </ListItem>
-    ))}
-  </List>
-)
-
 export const CommonLayoutDrawer = (props: CommonLayoutDrawerProps) => {
   return (
     <Drawer
@@ -55,9 +29,9 @@ export const CommonLayoutDrawer = (props: CommonLayoutDrawerProps) => {
       <Box
         sx={{ width: 250 }}
       >
-        <DrawerList list={firstDrawerList} />
+        <CommonLayoutDrawerList list={FIRST_DRAWER_LIST} />
         <Divider />
-        <DrawerList list={secondDrawerList} />
+        <CommonLayoutDrawerList list={SECOND_DRAWER_LIST} />
       </Box>
     </Drawer>
   )

@@ -1,4 +1,4 @@
-export const firstDrawerList = [
+export const FIRST_DRAWER_LIST = [
   {
     id: 1,
     name: 'ホーム',
@@ -6,7 +6,7 @@ export const firstDrawerList = [
   },
 ]
 
-export const secondDrawerList = [
+export const SECOND_DRAWER_LIST = [
   {
     id: 11,
     name: '数学',

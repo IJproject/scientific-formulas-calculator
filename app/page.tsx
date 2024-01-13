@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <>
-      cksa
+      <a href="/physics">こちらが作成中のページです</a>
     </>  
   )
 }
