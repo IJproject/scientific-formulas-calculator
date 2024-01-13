@@ -1,12 +1,12 @@
 import React from "react";
 import { CommonLayoutBarDrawer } from "@/components/common/layout/CommonLayoutBarDrawer";
-import { Box, Container } from "@mui/material";
+import { AppBarProps, Box, Container } from "@mui/material";
 
 interface CommonLayoutProps {
   /**
    * AppBarの色
    */
-  color: string
+  color: AppBarProps["color"]
   /**
    * ジャンル名(数学や物理など)が入る
    */

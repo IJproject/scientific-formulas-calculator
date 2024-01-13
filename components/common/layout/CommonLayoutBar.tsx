@@ -3,6 +3,7 @@
 import React from 'react'
 import {
   AppBar,
+  AppBarProps,
   IconButton,
   Toolbar,
   Typography
@@ -13,7 +14,7 @@ interface CommonLayoutBarProps {
   /**
    * AppBarの色
    */
-  color: string
+  color: AppBarProps["color"]
   /**
    * ジャンル名(数学や物理など)が入る
    */
