@@ -11,6 +11,14 @@ import { Stack, Paper } from "@mui/material";
 export const PhysicsSimpleCalculator = () => {
   const [constants, setConstants] = React.useState([])
   const [formula, setFormula] = React.useState("")
+  const [result, setResult] = React.useState("")
+  const isCalculating = React.useState(false)
+  const isFormatting = React.useState(false)
+
+    setInterval(() => {
+      setFormula('計算式')
+      setResult('結果')
+    }, 2000)
 
   return (
     <>
@@ -23,8 +31,8 @@ export const PhysicsSimpleCalculator = () => {
       <Paper>
         <Stack p={2} spacing={2}>
           <PhysicsSimpleCalculatorForm />
-          <PhysicsSimpleCalculatorDisplay />
-          <PhysicsSimpleCalculatorResult />
+          <PhysicsSimpleCalculatorDisplay formule={formula} />
+          <PhysicsSimpleCalculatorResult result={result} />
         </Stack>
       </Paper>
       

@@ -3,10 +3,14 @@
 import React from "react";
 import { DisplayResult } from "@/components/common/displays/DisplayResult";
 
-export const PhysicsSimpleCalculatorDisplay = () => {
+interface PhysicsSimpleCalculatorDisplayProps {
+  formule: string
+}
+
+export const PhysicsSimpleCalculatorDisplay = (props: PhysicsSimpleCalculatorDisplayProps) => {
   return (
     <DisplayResult bgColor="success.lightpale" title="計算式">
-      フォーマットされた計算式がここに出力されます
+      {props.formule}
     </DisplayResult>
   )
 }
