@@ -27,7 +27,7 @@ interface CommonLayoutBarProps {
 
 export const CommonLayoutBar = (props: CommonLayoutBarProps) => {
   return (
-    <AppBar position="static" color={props.color}>
+    <AppBar position="static" color={props.color} elevation={0}>
       <Toolbar>
         <IconButton
           size="large"

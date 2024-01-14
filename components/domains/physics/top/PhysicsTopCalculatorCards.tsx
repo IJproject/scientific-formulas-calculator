@@ -1,7 +1,6 @@
 import React from 'react'
 import { PHYSICS_CALCULATOR_LIST } from '@/constants/domains/physics'
-import { Box, Card, CardActionArea, CardContent, Stack, Typography } from '@mui/material'
-
+import { Card, CardActionArea, CardContent, Stack, Typography } from '@mui/material'
 
 export const PhysicsTopCalculatorCards = () => {
   return (

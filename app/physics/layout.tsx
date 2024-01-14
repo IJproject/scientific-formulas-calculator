@@ -1,5 +1,5 @@
-import { CommonLayout } from '@/components/common/layout/CommonLayout';
 import React from 'react';
+import { CommonLayout } from '@/components/common/layout/CommonLayout';
 
 const Layout = (props: { children: React.ReactNode }) => {
   return (

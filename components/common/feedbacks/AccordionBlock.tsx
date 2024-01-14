@@ -12,6 +12,10 @@ interface AccordionBlockProps {
    */
   title: string
   /**
+   * デフォルトで開くならtrue
+   */
+  defaultExpanded?: boolean
+  /**
    * wrapperの中身
    */
   content: React.ReactNode
@@ -20,7 +24,7 @@ interface AccordionBlockProps {
 export const AccordionBlock = (props: AccordionBlockProps) => {
   return (
     <Box mb={4}>
-      <Accordion>
+      <Accordion defaultExpanded={props.defaultExpanded}>
         <AccordionSummary
           expandIcon={<ExpandMore />}
           aria-controls={props.name}
